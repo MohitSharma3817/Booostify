@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Helmet } from "react-helmet-async"
+import Logo from "../assets/Logo.jpeg"
 
 const Navbar = () => {
   const [open, setOpen] = useState(false)
@@ -36,7 +37,7 @@ const Navbar = () => {
             {/* LOGO */}
             <div className="absolute left-6">
               <img
-                src="src/components/Logo.jpeg"
+                src={Logo}
                 alt="Boostify Logo"
                 className="h-20 w-24"
               />
