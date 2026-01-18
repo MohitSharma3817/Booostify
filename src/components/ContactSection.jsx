@@ -10,16 +10,17 @@ const ContactSection = () => {
 
     emailjs
       .sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+        "service_46cffvf",
+        "template_b6ekaj9",
         formRef.current,
-        "YOUR_PUBLIC_KEY"
+        "Sainky"
       )
       .then(() => {
         alert("Request sent successfully ✅")
         e.target.reset()
       })
-      .catch(() => {
+      .catch((err) => {
+        console.log("EmailJS error:", err)
         alert("Something went wrong ❌")
       })
   }
@@ -28,28 +29,18 @@ const ContactSection = () => {
     <section
       id="form"
       className="min-h-screen bg-cover bg-center flex items-center"
-      aria-labelledby="contact-heading"
-      style={{
-        backgroundImage:
-          "url('https://images.unsplash.com/photo-1503264116251-35a269479413')",
-      }}
     >
-      {/* SEO META */}
       <Helmet>
-        <title>Contact Us | Mobile Signal Booster Enquiry | Boostify</title>
+        <title>Contact Us | Boostify</title>
         <meta
           name="description"
-          content="Get in touch with Boostify to enquire about mobile signal boosters for homes, offices, and industries. Fast response guaranteed."
+          content="Contact Boostify for mobile signal booster enquiry."
         />
       </Helmet>
 
       <div className="w-full max-w-7xl mx-auto px-4 flex justify-center md:justify-end">
-        {/* FORM CARD */}
-        <div className="bg-[#dde8e2f0] w-full sm:w-105 p-6 sm:p-8 rounded-lg shadow-lg">
-          <h2
-            id="contact-heading"
-            className="text-xl sm:text-2xl font-bold text-gray-800 mb-6"
-          >
+        <div className="bg-[#dde4ea] w-full max-w-md p-6 sm:p-8 rounded-xl shadow-xl">
+          <h2 className="text-2xl font-bold text-[#0b3c5d] mb-6">
             Enquire about Mobile Signal Boosters right now!
           </h2>
 
@@ -57,73 +48,39 @@ const ContactSection = () => {
             ref={formRef}
             onSubmit={sendEmail}
             className="flex flex-col gap-4"
-            aria-label="Mobile signal booster enquiry form"
           >
-            <label className="sr-only" htmlFor="user_name">
-              Name
-            </label>
+            {/* REQUIRED FOR TEMPLATE */}
+            <input type="hidden" name="title" value="Website Enquiry" />
+
             <input
-              id="user_name"
               type="text"
-              name="user_name"
+              name="name"
               placeholder="Name"
-              className="p-3 rounded-md outline bg-white"
+              className="p-3 rounded-md bg-white outline-none"
               required
             />
 
-            <label className="sr-only" htmlFor="user_mobile">
-              Mobile Number
-            </label>
             <input
-              id="user_mobile"
-              type="tel"
-              name="user_mobile"
-              placeholder="Mobile Number"
-              className="p-3 rounded-md outline bg-white"
-              required
-            />
-
-            <label className="sr-only" htmlFor="user_email">
-              Email
-            </label>
-            <input
-              id="user_email"
               type="email"
-              name="user_email"
+              name="email"
               placeholder="Email"
-              className="p-3 rounded-md outline bg-white"
+              className="p-3 rounded-md bg-white outline-none"
               required
             />
 
-            <label className="sr-only" htmlFor="user_city">
-              City
-            </label>
-            <input
-              id="user_city"
-              type="text"
-              name="user_city"
-              placeholder="City"
-              className="p-3 rounded-md outline bg-white"
-              required
-            />
-
-            <label className="sr-only" htmlFor="message">
-              Message
-            </label>
             <textarea
-              id="message"
               name="message"
               placeholder="Write your message here..."
-              rows="2"
-              className="p-3 rounded-md outline resize-none bg-white"
+              rows="4"
+              className="p-3 rounded-md bg-white outline-none resize-none"
               required
             ></textarea>
 
             <button
               type="submit"
-              className="bg-[#0b3c5d] text-white py-3 rounded-full font-semibold hover:bg-[#092f4a] transition"
+              className="mt-2 bg-[#0b3c5d] text-white py-3 rounded-full font-semibold hover:bg-[#092f4a] transition"
             >
-              Submit
+              REQUEST A CALLBACK
             </button>
           </form>
         </div>
