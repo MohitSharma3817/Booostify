@@ -36,7 +36,7 @@ const Navbar = () => {
             {/* LOGO */}
             <div className="absolute left-6">
               <img
-                src="public\Logo.jpeg"
+                src="src\Logo.jpeg"
                 alt="Boostify Logo"
                 className="h-20 w-24"
               />
