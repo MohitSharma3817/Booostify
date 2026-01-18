@@ -17,7 +17,7 @@ const Help = () => {
     >
       {/* SEO META */}
       <Helmet>
-        <title>Help & Support | Boostify</title>
+        <title>Boostify</title>
         <meta
           name="description"
           content="Get help and support from Boostify. Contact us via email, phone, WhatsApp or follow us on social media for updates."
