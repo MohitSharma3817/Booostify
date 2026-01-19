@@ -26,11 +26,10 @@ const About = () => {
           </h2>
 
           <p className="text-gray-700 leading-7">
-            Boostify is a technology-driven company focused on delivering
-            high-quality mobile signal boosters and communication solutions
-            for homes, offices, and industrial environments. Our goal is to
-            ensure strong, reliable network connectivity in areas with weak
-            mobile signals.
+            Boostify is a technology-driven company dedicated to providing cutting-edge mobile signal boosters and comprehensive communication solutions.
+            We specialize in enhancing network connectivity for homes, offices, and industrial environments, ensuring strong and reliable mobile signals 
+            in areas where coverage is weak. Our commitment is to deliver superior performance and seamless connectivity, empowering our customers with 
+            uninterrupted communication.
           </p>
         </article>
       </div>
