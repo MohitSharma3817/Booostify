@@ -49,10 +49,7 @@ const ProductCard = ({ title, desc, image, price }) => {
           </button>
         )}
 
-        {/* PRICE */}
-        <div className="mt-2">
-          <p className="text-md font-bold">{price}</p>
-        </div>
+        
       </article>
 
       {/* MODAL */}
