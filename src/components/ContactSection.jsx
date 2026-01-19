@@ -31,7 +31,7 @@ const ContactSection = () => {
       aria-labelledby="contact-heading"
       style={{
         backgroundImage:
-          "url('src/assets/background.jpg')",
+          "url('/src/assets/background.jpg')",
       }}
     >
       {/* SEO META */}
