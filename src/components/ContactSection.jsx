@@ -1,6 +1,7 @@
 import { useRef } from "react"
 import { Helmet } from "react-helmet-async"
 import emailjs from "@emailjs/browser"
+import background from "../assets/background.jpg"
 
 const ContactSection = () => {
   const formRef = useRef()
@@ -32,7 +33,7 @@ const ContactSection = () => {
       
       style={{
         backgroundImage:
-          "url('../src/assets/background.jpeg')",
+          "url('" + background + "')",
       }}
     >
       {/* SEO META */}
