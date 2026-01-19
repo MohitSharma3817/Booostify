@@ -32,7 +32,7 @@ const ContactSection = () => {
       
       style={{
         backgroundImage:
-          "url('../src/assets/background.jpg')",
+          "url('../src/assets/background.jpeg')",
       }}
     >
       {/* SEO META */}
