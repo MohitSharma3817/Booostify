@@ -29,9 +29,10 @@ const ContactSection = () => {
       id="form"
       className="min-h-screen bg-cover bg-center flex items-center"
       aria-labelledby="contact-heading"
+      
       style={{
         backgroundImage:
-          "url('/src/assets/background.jpg')",
+          "url('../src/assets/background.jpg')",
       }}
     >
       {/* SEO META */}
