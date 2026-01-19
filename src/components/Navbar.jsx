@@ -31,7 +31,7 @@ const Navbar = () => {
       </Helmet>
 
       <header>
-        <nav className="fixed top-0 w-full bg-white shadow z-50">
+        <nav className="fixed top-0 w-full bg-slate-900 shadow-lg z-50">
           <div className="max-w-7xl mx-auto px-6 h-20 flex items-center relative">
             
             {/* LOGO */}
@@ -39,23 +39,39 @@ const Navbar = () => {
               <img
                 src={Logo}
                 alt="Boostify Logo"
-                className="h-20 w-24"
+                className="h-16 w-auto"
               />
             </div>
 
             {/* DESKTOP MENU */}
-            <ul className="hidden md:flex mx-auto gap-10 font-medium">
-              <li><button onClick={() => scrollTo("home")}>Home</button></li>
-              <li><button onClick={() => scrollTo("about")}>About</button></li>
-              <li><button onClick={() => scrollTo("products")}>Products</button></li>
-              <li><button onClick={() => scrollTo("contact")}>Contact</button></li>
-              <li><button onClick={() => scrollTo("help")}>Help</button></li>
+            <ul className="hidden md:flex mx-auto gap-12 font-medium text-slate-200">
+              {["home", "about", "products", "contact", "help"].map((item) => (
+                <li key={item}>
+                  <button
+                    onClick={() => scrollTo(item)}
+                    className="
+                      relative py-1
+                      hover:text-cyan-400
+                      transition-colors duration-300
+                      after:content-['']
+                      after:absolute after:left-0 after:-bottom-1
+                      after:w-0 after:h-[2px]
+                      after:bg-cyan-400
+                      hover:after:w-full
+                      after:transition-all after:duration-300
+                    "
+                  >
+                    {item.charAt(0).toUpperCase() + item.slice(1)}
+                  </button>
+                </li>
+              ))}
             </ul>
 
             {/* MOBILE TOGGLE */}
             <button
-              className="md:hidden absolute right-6 text-2xl"
+              className="md:hidden absolute right-6 text-3xl text-slate-200"
               onClick={() => setOpen(!open)}
+              aria-label="Toggle menu"
             >
               ☰
             </button>
@@ -63,13 +79,18 @@ const Navbar = () => {
 
           {/* MOBILE MENU */}
           {open && (
-            <div className="md:hidden bg-white shadow px-6 pb-4">
-              <ul className="flex flex-col gap-5 font-bold">
-                <li><button onClick={() => scrollTo("home")}>Home</button></li>
-                <li><button onClick={() => scrollTo("about")}>About</button></li>
-                <li><button onClick={() => scrollTo("products")}>Products</button></li>
-                <li><button onClick={() => scrollTo("contact")}>Contact</button></li>
-                <li><button onClick={() => scrollTo("help")}>Help</button></li>
+            <div className="md:hidden bg-slate-800 shadow-inner px-6 pb-6">
+              <ul className="flex flex-col gap-6 font-semibold text-slate-200">
+                {["home", "about", "products", "contact", "help"].map((item) => (
+                  <li key={item}>
+                    <button
+                      onClick={() => scrollTo(item)}
+                      className="hover:text-cyan-400 transition-colors"
+                    >
+                      {item.charAt(0).toUpperCase() + item.slice(1)}
+                    </button>
+                  </li>
+                ))}
               </ul>
             </div>
           )}
