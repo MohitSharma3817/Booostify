@@ -55,7 +55,7 @@ const Navbar = () => {
                       transition-colors duration-300
                       after:content-['']
                       after:absolute after:left-0 after:-bottom-1
-                      after:w-0 after:h-[2px]
+                      after:w-0 after:h-0.5
                       after:bg-cyan-400
                       hover:after:w-full
                       after:transition-all after:duration-300
