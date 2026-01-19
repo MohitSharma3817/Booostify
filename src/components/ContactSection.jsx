@@ -37,7 +37,7 @@ const ContactSection = () => {
     >
       {/* SEO META */}
       <Helmet>
-        <title>Contact Us | Mobile Signal Booster Enquiry | Boostify</title>
+        <title>Contact Us | Mobile Signal Booster Enquiry | Boostify Technologies</title>
         <meta
           name="description"
           content="Get in touch with Boostify to enquire about mobile signal boosters for homes, offices, and industries. Fast response guaranteed."

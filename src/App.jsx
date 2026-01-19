@@ -11,7 +11,7 @@ const App = () => {
     <>
       {/* GLOBAL FALLBACK SEO */}
       <Helmet>
-        <title>Boostify | Mobile Signal Boosters for Home & Office</title>
+        <title>Boostify Technologies | Mobile Signal Boosters for Home & Office</title>
         <meta
           name="description"
           content="Boostify provides reliable mobile signal boosters for homes, offices, and industrial spaces across India."

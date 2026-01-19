@@ -6,7 +6,7 @@ const Home = () => {
     <main id="home" aria-labelledby="home-heading">
       {/* SEO META */}
       <Helmet>
-        <title>Boostify | Mobile Signal Boosters for Home & Office</title>
+        <title>Boostify Technologies | Mobile Signal Boosters for Home & Office</title>
         <meta
           name="description"
           content="Boostify offers reliable mobile signal boosters for homes, offices, and industries. Improve network coverage and connectivity with our solutions."

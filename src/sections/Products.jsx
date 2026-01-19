@@ -11,7 +11,7 @@ const Products = () => {
     >
       {/* SEO META */}
       <Helmet>
-        <title>Products | Mobile Signal Boosters for Home & Office | Boostify</title>
+        <title>Products| Mobile Signal Boosters for Home & Office | Boostify</title>
         <meta
           name="description"
           content="Explore Boostify’s range of mobile signal boosters designed for homes, offices, and industrial spaces. Improve connectivity with reliable signal solutions."
