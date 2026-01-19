@@ -1,44 +1,21 @@
-import { useRef } from "react"
 import { Helmet } from "react-helmet-async"
-import emailjs from "@emailjs/browser"
 import background from "../assets/background.jpg"
 
 const ContactSection = () => {
-  const formRef = useRef()
-
-  const sendEmail = (e) => {
-    e.preventDefault()
-
-    emailjs
-      .sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
-        formRef.current,
-        "YOUR_PUBLIC_KEY"
-      )
-      .then(() => {
-        alert("Request sent successfully ✅")
-        e.target.reset()
-      })
-      .catch(() => {
-        alert("Something went wrong ❌")
-      })
-  }
-
   return (
     <section
       id="form"
       className="min-h-screen bg-cover bg-center flex items-center"
       aria-labelledby="contact-heading"
-      
       style={{
-        backgroundImage:
-          "url('" + background + "')",
+        backgroundImage: `url(${background})`,
       }}
     >
       {/* SEO META */}
       <Helmet>
-        <title>Contact Us | Mobile Signal Booster Enquiry | Boostify Technologies</title>
+        <title>
+          Contact Us | Mobile Signal Booster Enquiry | Boostify Technologies
+        </title>
         <meta
           name="description"
           content="Get in touch with Boostify to enquire about mobile signal boosters for homes, offices, and industries. Fast response guaranteed."
@@ -56,70 +33,54 @@ const ContactSection = () => {
           </h2>
 
           <form
-            ref={formRef}
-            onSubmit={sendEmail}
+            action="https://formspree.io/f/mykkjwqq"
+            method="POST"
             className="flex flex-col gap-4"
             aria-label="Mobile signal booster enquiry form"
           >
-            <label className="sr-only" htmlFor="user_name">
-              Name
-            </label>
             <input
-              id="user_name"
               type="text"
-              name="user_name"
+              name="name"
               placeholder="Name"
               className="p-3 rounded-md outline bg-white"
               required
             />
 
-            <label className="sr-only" htmlFor="user_mobile">
-              Mobile Number
-            </label>
             <input
-              id="user_mobile"
               type="tel"
-              name="user_mobile"
+              name="phone"
               placeholder="Mobile Number"
               className="p-3 rounded-md outline bg-white"
               required
             />
 
-            <label className="sr-only" htmlFor="user_email">
-              Email
-            </label>
             <input
-              id="user_email"
               type="email"
-              name="user_email"
+              name="email"
               placeholder="Email"
               className="p-3 rounded-md outline bg-white"
               required
             />
 
-            <label className="sr-only" htmlFor="user_city">
-              City
-            </label>
             <input
-              id="user_city"
               type="text"
-              name="user_city"
+              name="city"
               placeholder="City"
               className="p-3 rounded-md outline bg-white"
               required
             />
 
-            <label className="sr-only" htmlFor="message">
-              Message
-            </label>
             <textarea
-              id="message"
               name="message"
               placeholder="Write your message here..."
-              rows="2"
+              rows="3"
               className="p-3 rounded-md outline resize-none bg-white"
               required
             ></textarea>
+
+            {/* OPTIONAL: Formspree spam protection */}
+            <input type="hidden" name="_subject" value="New Website Enquiry" />
+            <input type="hidden" name="_template" value="table" />
 
             <button
               type="submit"
