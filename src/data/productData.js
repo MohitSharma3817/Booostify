@@ -1,4 +1,4 @@
-import RJLINK from "../assets/RJLINK.jpg";
+import RJLINK from "../assets/ProductImages/RJLINK.jpg";
 const productsData = [
   {
     id: 1,
