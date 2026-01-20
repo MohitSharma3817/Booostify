@@ -1,16 +1,17 @@
+
 const productsData = [
   {
     id: 1,
-    title: "Home Booster ",
-    description: "Best for houses and small apartments",
-    image: "https://lintratek.in/wp-content/uploads/2023/11/sasa-min.png",
+    title: "RJLINK Signal Booster ",
+    description: "RJLINK JIO/2G/3G/4G Router mobile phone signal booster all sim working boost network & data complete kit area coverage 3500 sq.feet GST included",
+    image: "src\\data\\ProductImages\\Home-Elite-Triband-Universal-Signal-Booster-1.jpg",
     
   },
   {
     id: 2,
-    title: "Office Booster",
-    description: "Ideal for offices and commercial buildings lorem ipsum Ideal for offices and commercial buildings lorem ipsum Ideal for offices and commercial buildings lorem ipsum Ideal for offices and commercial buildings lorem ipsum Ideal for offices and commercial buildings lorem ipsum",
-    image: "https://lintratek.in/wp-content/uploads/2023/11/sasa-min.png",
+    title: "CELLEXXA 5G Signal Booster",
+    description: "CELLEXXA 5G Signal Booster for Home, Boosts Network & Data, Complete Kit, Area Coverage 4500 Sq.Feet",
+    image: "src\\data\\ProductImages\\5g-network-booster.jpg",
     
   },
   {
