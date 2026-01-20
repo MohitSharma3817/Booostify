@@ -1,10 +1,10 @@
-
+import RJLINK from "../assets/RJLINK.jpg";
 const productsData = [
   {
     id: 1,
     title: "RJLINK Signal Booster ",
     description: "RJLINK JIO/2G/3G/4G Router mobile phone signal booster all sim working boost network & data complete kit area coverage 3500 sq.feet GST included",
-    image: "src\\data\\ProductImages\\Home-Elite-Triband-Universal-Signal-Booster-1.jpg",
+    image: RJLINK,
     
   },
   {
